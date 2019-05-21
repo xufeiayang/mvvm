@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="app">
+    <input v-model="message">
+    <div>{{message}}</div>
+    <ul><li></li></ul>
+    {{message}}
+  </div>
+<!--  <script>写到body标签内靠后比较好，-->
+<!--  因为JavaScript 会操作html元素， 如果在body加载完之前写JavaScript 会造成JavaScript 找不到页面元素-->
+  <script src="watcher.js"></script>
+  <script src="observer.js"></script>
+  <script src="compile.js"></script>
+  <script src="MVVM.js"></script>
+  <script type="text/javascript" async>
+    let vm = new MVVM({
+      el: '#app',
+      data: {
+        message: 'hello',
+        xufeiyang: {
+          a:1
+        }
+      }
+    })
+  </script>
+</body>
+</html>
